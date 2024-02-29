@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<meta name="Description" content="Ktupad MVC Framework by wawan sismadi">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<meta property="og:image" content="http://example.com/logo.jpg">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="1024">
+<title>Donat Prints</title>
+<link rel="shortcut icon" href="bijak.jpg">
+<link rel="stylesheet" type="text/css" href="style.css" async>
+</head>
+<body>
+<a onclick="PrintElem()" href="#" class="float noprint">
+<div class="my-float">Print</div>
+</a>
+<div id="content" class="invoice-box" >
+
+<table>
+<tr class="top"><td id="header"></td></tr>
+<tr><td id='items'></td></tr>
+<tr><td id='footer'></td></tr>
+</table>
+</div>
+
+</body>
+
+<script type="text/javascript" src="script.js"></script>
+<script language="JavaScript">
+function gebi(id){ return document.getElementById(id);}
+var arr=JSON.parse(window.localStorage.getItem('cetak'));
+console.log (arr)
+// arr={
+// a:[{id:1,nama:'satu'}],
+// b:[{id:2,nama:'dua'},{id:1,nama:'satu'}]
+// };
+
+page=1;
+rpp=2000;
+
+gebi('header').innerHTML=headers(arr.head);
+gebi('items').innerHTML=table(arr.body);
+
+// gebi('tanggal').innerHTML=arr.a[0].tanggal;
+// gebi('ns').innerHTML=arr.a[0].nama;
+// gebi('pembuat').innerHTML=arr.a[0].keterangan;
+console.log(arr)
+
+</script>
+
+</html>
