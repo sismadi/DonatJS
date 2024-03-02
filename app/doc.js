@@ -125,7 +125,7 @@ model=[
     'plus','printer','pen','chart','cart','card','envelope','geo','twitter','google',
     'facebook','whatsapp','eye','qrcode','search','minus','bayam','scan',
     'upload','download','camera','bel','lock','setting','terminal','process',
-    'decision','io','connector','ellipse','calendar','donat','ktupad'
+    'decision','io','connector','ellipse','calendar','donat','ktupad','wedus',
   ]},
 
 
