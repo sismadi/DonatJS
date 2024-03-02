@@ -69,8 +69,27 @@ Made with <svg style="width:24;height:24;">
 </div>
 
 <script type="text/javascript" src="https://donat.id/donat/donat.js"></script>
+<script type="text/javascript" src="https://donat.id/app/donat/kasir.js"></script>
+    
 <script type="text/javascript">
 
+    
+d.controller.produk=function(){
+
+  // d.info(kasir.model.versi)
+  produk=kasir.model.produk;
+  cart=kasir.model.cart;
+  out  =`<div class="col-2-3">`
+  out +=kasir.view.produk(produk)
+  out +=`</div>`
+  out +=`<div class="col-1-3">`
+  out +=kasir.view.cart(cart)
+  out +=`</div>`
+  d.gebi('content').innerHTML=out;
+
+}
+
+    
 // d.model.css={
 // ul:'ul', li:'li', a:'a',search:'search',page:'shadow row',
 // table:'table table-borderless report-table',
