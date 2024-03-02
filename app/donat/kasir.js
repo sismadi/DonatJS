@@ -40,7 +40,7 @@ out+=`<div class="row shadow" onclick="${id}" >
 <div class="">
 2 x ${nama} <br>
 @5.000<br/>
-Rp.10.0000
+Rp.10.000
 </div>
 <div class="btns">
 <button class="" onClick="kasir.controller.add(${id})">${d.svg.icon('trush')} Remove</button>
@@ -49,7 +49,7 @@ Rp.10.0000
 </div>
 </div>`;
 }
-out+=`<div class="shadow"> Total:Rp.150.000 <br/><button onClick="kasir.controller.add(${id})">Bayar</button> </div>`;
+out+=`<div class="shadow"> Total:Rp.20.000 <br/><button onClick="kasir.controller.add(${id})">Bayar</button> </div>`;
 return out;
 },
 
