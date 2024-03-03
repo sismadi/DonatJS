@@ -69,11 +69,9 @@ Made with <svg style="width:24;height:24;">
 </div>
 
 <script type="text/javascript" src="https://donat.id/donat/donat.js"></script>
-<script type="text/javascript" src="https://donat.id/app/donat/kasir.js"></script>
-    
+<script type="text/javascript" src="../donat/kasir.js"></script>
 <script type="text/javascript">
 
-    
 d.controller.produk=function(){
 
   // d.info(kasir.model.versi)
@@ -89,7 +87,7 @@ d.controller.produk=function(){
 
 }
 
-    
+
 // d.model.css={
 // ul:'ul', li:'li', a:'a',search:'search',page:'shadow row',
 // table:'table table-borderless report-table',
@@ -100,12 +98,12 @@ d.controller.produk=function(){
 // };
 
 
-// d.setcss('--pColor-h', '213');
-// d.setcss('--pColor-s', '100%');
-// d.setcss('--pColor-l', '22.5%');
+d.setcss('--pColor-h', '213');
+d.setcss('--pColor-s', '100%');
+d.setcss('--pColor-l', '22.5%');
 
 d.svg.di();
-// d.api.host="http://localhost/api/database.php";
+// d.api.host="http://localhost/api/ukm/database.php";
 d.api.host="https://api.donat.id/ukm/database.php";
 
 d.login.login();
