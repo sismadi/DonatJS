@@ -5,7 +5,7 @@
 
 <link rel="shortcut icon" href="favicon.ico">
 <meta charset="UTF-8">
-<meta name="Description" content="Ktupad MVC Framework by wawan sismadi">
+<meta name="Description" content="DonatJS by wawan sismadi">
 <!-- PWA related meta tags -->
 <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=5"> -->
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
@@ -24,14 +24,36 @@
 <meta name="msapplication-TileColor" content="#386CC1">
 <meta name="theme-color" content="#164391">
 <style>
-body{ background:#004761;}
-img { position: absolute;top: 50%;left: 50%; width: 72px; margin-left: -36px; /* Half the width */}
+body{ background:#DF8C43;}
+svg { position: absolute;top: 50%;left: 50%; width: 72px; margin-left: -36px; /* Half the width */}
+
+svg {width: 100px; height: auto;}
+svg path{ fill:url('#gradient');}
+svg { filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4)); }
+svg stop:nth-child(1) { stop-color: "#DF8C43";}
+svg stop:nth-child(2) { stop-color: "#EAB485";}
+svg:hover path {
+stroke-dasharray: 200;
+stroke-dashoffset: 200;
+pointer-events: none;
+animation: animateDash 3s linear forwards infinite;
+}
+@keyframes animateDash { to { stroke-dashoffset: 0; } }
+
 </style>
 
-<title>Ktupad v2</title>
+<title>DonatJS</title>
 <script src="register-worker.js"></script>
 </head>
 <body>
-<img src="logo.svg" alt="ktupad">
+  <svg class="svgicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <defs>
+      <linearGradient id="gradient" x1="50%" y1="-2.48949813e-15%" x2="50%" y2="100%">
+      <stop stop-color="#DF8C43" offset="0%"></stop>
+      <stop stop-color="#EAB485" offset="100%"></stop>
+      </linearGradient>
+      </defs>
+  <path id="donat" stroke="#fff" fill="url(#gradient)" d="M 12 10 c -5 -5 -8 4 0 7 c 8 -3 5 -12 0 -7 M 12 22 A 8 8 0 0 1 12 2 a 8 8 0 0 1 0 20 z"></path>
+  </svg>
 </body>
 </html>

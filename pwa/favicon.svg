@@ -1,0 +1,9 @@
+<svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+<defs>
+<linearGradient id="gradient" x1="50%" y1="-2.48949813e-15%" x2="50%" y2="100%">
+<stop stop-color="#DF8C43" offset="0%"></stop>
+<stop stop-color="#EAB485" offset="100%"></stop>
+</linearGradient>
+</defs>
+<path id="donat" stroke="#fff" fill="url(#gradient)" d="M 12 10 c -5 -5 -8 4 0 7 c 8 -3 5 -12 0 -7 M 12 22 A 8 8 0 0 1 12 2 a 8 8 0 0 1 0 20 z"></path>
+</svg>

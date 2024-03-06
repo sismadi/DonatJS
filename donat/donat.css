@@ -1,5 +1,5 @@
 :root {
-  /* IPWIJA rgb(0 52 115); hsl (213 100% 22.5%) */
+/* IPWIJA rgb(0 52 115); hsl (213 100% 22.5%) */
 
 --pColor-h: 28;
 --pColor-s: 71%;
@@ -38,11 +38,90 @@ letter-spacing: 0.5px;
 [class*='col-'] { width: 100%; }
 }
 .gTable { overflow: auto; }
+
 .table { border-collapse:collapse; border-spacing:0; width:100%; color: #000; }
+.table td{ empty-cells: show; }
+
 .table tr { background:#f8f8f8; }
-.table tr:nth-child(even){ background:#fff; }
+.table tr:nth-child(even){ background:#fff;}
 .table th { height:37px; }
 .table th, table td { border:none; text-align:left; padding:8px; }
+
+.table thead {
+position: absolute;
+clip: rect(1px 1px 1px 1px);
+/* IE6, IE7 */
+clip: rect(1px, 1px, 1px, 1px);
+padding: 0;
+border: 0;
+height: 1px;
+width: 1px;
+overflow: hidden;
+}
+.table thead th:first-of-type {text-align: left;}
+.table tbody,
+.table tr,
+.table th,
+.table td {
+display: block;
+padding: 0;
+text-align: left;
+white-space: normal;
+}
+.table th,
+.table td { padding: .5em;}
+.table caption {  margin-bottom: 1em;  font-size: 1em;  font-weight: bold;  text-align: center;}
+.table tfoot {  }
+.table tbody tr {  margin-bottom: 1em;  border: 1px solid var(--pLightColor); border-radius: 8px;}
+.table tbody tr:last-of-type {  margin-bottom: 0;}
+.table tbody th[scope="row"] { background-color: #1d96b2; color: white;}
+.table tbody td[data-type=currency] { text-align: right;}
+.table tbody td[data-title]:before {
+content: attr(data-title);
+float: left;
+/* font-size: .8em; */
+/* color: rgba(94, 93, 82, 0.75); */
+}
+.table tbody td { text-align: right;}
+
+
+@media screen and (min-width: 700px) {
+.table {  }
+.table thead {
+position: relative;
+clip: auto;
+height: auto;
+width: auto;
+overflow: auto;
+}
+.table tr { display: table-row; }
+.table th,
+.table td { display: table-cell; padding: .5em; }
+
+.table caption {
+/* font-size: 1.5em; */
+}
+.table tbody { display: table-row-group; }
+.table tbody tr {  display: table-row;  }
+.table tbody tr {  margin-bottom: 1em;  border: 0;}
+
+.table tbody tr:nth-of-type(even) {
+background-color: rgba(94, 93, 82, 0.1);
+}
+.table tbody th[scope="row"] {
+background-color: transparent;
+/* color: #5e5d52; */
+text-align: left;
+}
+.table tbody td { text-align: left;  }
+.table tbody td[data-title]:before { content: none; }
+}
+
+
+
+
+
+
 .gButton { display: flex; flex-wrap: wrap; flex-direction: row;}
 .button {
 color:white;
@@ -61,7 +140,6 @@ box-shadow: 0 0 5px var(--pLightColor);
 background-image: linear-gradient(var(--pColor), var(--pLightColor),var(--pColor),var(--pColor));
 }
 
-.button span{margin-left: 5px;}
 
 .form { margin-bottom: 10px; }
 .gInput { position: relative; padding:5px;}
@@ -314,7 +392,7 @@ background: #F8C01B none repeat scroll 0 0;
 }
 .float_right {float: right; margin-right: 10px;}
 .img { width: 100%; height: auto;}
-.footer{ text-align: center; margin-top: 20px; margin-bottom: 30px;}
+.footer{ text-align: center; margin-top: 50px;}
 .pie { max-width: 250px;}
 .gButton { position: relative; }
 .gButton .kanan { position: absolute; right: 5px;}
@@ -328,7 +406,7 @@ background:rgba(0, 0, 0, 0.4); height:100%; width:100%; position:fixed; top:0; l
 overflow:auto; z-index: 99;
 }
 .main.login{ margin-left: 0px; margin-top: 100px;}
-.gIcons{ display: table; table-layout: fixed; padding: 5px; text-align: center;}
+.gIcons{ display: table; table-layout: fixed; padding: 5px;}
 .icons{ width: 70px; display:inline-block; text-align: center;
 }
 .icons span {
@@ -342,8 +420,14 @@ align-items: center;
 .gGrid div span{padding: 10px; display:inline-block; text-align: center; background-color: white;   width: 100%; height: auto;}
 
 .toast {
-  min-width:250px; position:fixed; bottom:30px; left:50%; margin-left:-125px;
-  text-align:center; padding:16px; z-index:1;
+min-width:250px; position:fixed; bottom:30px; left:50%; margin-left:-125px;
+text-align:center; padding:16px; z-index:1;
 color: var(--pButtonColor);
 background-color: var(--pColor);
+}
+
+
+@media screen and (max-width: 450px) {
+  .button { width: 100%; margin: 0; margin-bottom: 5px;}
+  .footer {  margin-bottom: 30px;}
 }
