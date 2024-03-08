@@ -187,10 +187,11 @@ log(arr)
 var{page,rpp,data}=arr;
 var al=data.length;
 var np=Math.ceil(al / rpp);
-out=`<table class="${css.table}"><tr>`;
-out+=`<thead><th>Aksi</th>`;
+out=`<table class="${css.table}">`;
+out+=`<thead><tr><th>Aksi</th>`;
 for(i in data[0]){ out+=`<th scope="col">${i}</th>`; }
-out+=`</tr></thead><tbody>`;
+out+=`</tr></thead>
+<tbody>`;
 
 for (var key=(page-1) * rpp; key < (page * rpp) && key < al; key++) { col=data[key];
 out+=`<tr>`;
@@ -201,7 +202,8 @@ if(str.length>12){ str=str.substring(0, 12) + ' ...' }
 out+=`<td data-title="${i}">&nbsp; ${str} </td>`; }
 out+=`</tr>`;
 }
-out+=`</tbody></table>`;
+out+=`</tbody>
+</table>`;
 return out;
 },
 
