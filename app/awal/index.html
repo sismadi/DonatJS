@@ -1,0 +1,18 @@
+<div id="container">sebelum</div>
+
+
+<script>
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+if (this.readyState == 4 && this.status == 200) {
+res=xhttp.responseText
+  
+document.getElementById("container").innerHTML = res;
+}
+};
+xhttp.open("GET", "filename", true);
+xhttp.send();
+  
+
+  
+</script>
