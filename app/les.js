@@ -135,7 +135,7 @@ return  d.view.button(d.model.button);
 }
 function l12(){
 
-  d.api.host="https://donat.id/api/database.php";
+  d.api.host="https://api.donat.id/ukm/database.php";
   d.api.req({mod:"setting",id:'32'},callback);
   function callback(json){res=JSON.parse(json);
   log(res);
