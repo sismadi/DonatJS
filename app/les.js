@@ -142,7 +142,7 @@ function l12(){
    d.model.button.data=JSON.parse(res[0].isi);
    d.gebi('content').innerHTML=d.view.button(d.model.button);
    dm=d.view.button(d.model.button);
-  return  res;
+  return  dm;
 }
 }
 
