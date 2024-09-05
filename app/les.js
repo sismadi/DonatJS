@@ -115,7 +115,7 @@ d.modal('detail produk');
 l12:{res:l12(),js:`
 
 log(d.api);<br/>
-d.api.host="https://donat.id/api/database.php";<br/>
+d.api.host="https://api.donat.id/ukm/database.php";<br/>
 d.api.req({mod:"setting",id:'32'},callback);<br/>
 function callback(json){res=JSON.parse(json);<br/>
 log(res);<br/>
