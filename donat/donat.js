@@ -1,5 +1,6 @@
 // DonatJS 1.0.0 Framework
 console.log('Powered by DonatJS 1.0.0');
+window.donatjsVersion = "1.0.0";
 
 log=console.log.bind(window.console);
 
