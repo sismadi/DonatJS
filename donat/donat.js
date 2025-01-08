@@ -1,4 +1,12 @@
 // DonatJS 1.0.0 Framework
+/*!
+ * DonatJS v1.0.0
+ * Framework JavaScript untuk aplikasi web.
+ */
+window.DonatJS = {
+  version: '1.0.0',
+  framework: true
+};
 console.log('Powered by DonatJS 1.0.0');
 window.donatjsVersion = "1.0.0";
 
